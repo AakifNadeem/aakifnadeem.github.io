@@ -1,52 +1,17 @@
-# Aakif Nadeem — Portfolio v2
+# Aakif Nadeem Portfolio
 
-A data-driven, animated portfolio built with Next.js, TypeScript, Tailwind CSS and Framer Motion.
+Static portfolio website for GitHub Pages.
 
-## Local development
+## Local preview
 
-```bash
-npm install
-npm run dev
-```
-
-Open `http://localhost:3000`.
-
-## Production build
+Run a local server from this folder:
 
 ```bash
-npm run build
+python3 -m http.server 8000
 ```
 
-The static site is exported to `out/`.
+Then open `http://localhost:8000`.
 
-## Content updates
+## Publish
 
-- Projects: `data/projects.ts`
-- Experience: `data/experience.ts`
-- Skills: `data/skills.ts`
-- Resume: `public/AakifResume.pdf`
-- Project images: `public/projects/`
-- Favicon: `public/icon.svg`
-
-## Add the profile image
-
-Add your photo as:
-
-```text
-public/profile/aakif.jpg
-```
-
-Then replace the placeholder inside `components/About.tsx` with an image element.
-
-## Add the FadFed showcase
-
-Place the main image in `public/projects/fadfed.png`, then set this in `data/projects.ts`:
-
-```ts
-image: "/projects/fadfed.png"
-```
-
-## GitHub Pages
-
-The workflow in `.github/workflows/deploy.yml` deploys whenever changes are merged into `main`.
-In repository settings, select **GitHub Actions** as the Pages source.
+Push all files in this folder to the root of the public GitHub repository `aakifnadeem.github.io`, then enable GitHub Pages from the `main` branch and root folder.
