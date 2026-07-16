@@ -98,3 +98,212 @@
     line-height: 1.35;
   }
 }
+
+/* Deep green, black and blue portfolio atmosphere */
+:root {
+  --bg: #030b0a;
+  --panel: #071310;
+  --line: rgba(176, 225, 210, .14);
+  --lime: #8fffc0;
+}
+
+html {
+  background: #020807;
+}
+
+body {
+  background:
+    radial-gradient(circle at 88% 4%, rgba(22, 90, 128, .32), transparent 30%),
+    radial-gradient(circle at 10% 13%, rgba(14, 105, 74, .28), transparent 31%),
+    radial-gradient(circle at 62% 44%, rgba(11, 54, 72, .20), transparent 36%),
+    linear-gradient(145deg, #020807 0%, #04110e 42%, #031019 72%, #020706 100%);
+  background-attachment: fixed;
+}
+
+.site-header {
+  background: linear-gradient(to bottom, rgba(2, 10, 9, .94), rgba(2, 10, 9, .48) 68%, transparent);
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-radius: 999px;
+  filter: blur(90px);
+  opacity: .34;
+}
+
+.hero::before {
+  width: 560px;
+  height: 560px;
+  right: -120px;
+  top: -80px;
+  background: #0c5772;
+}
+
+.hero::after {
+  width: 430px;
+  height: 430px;
+  left: -180px;
+  bottom: -100px;
+  background: #0d714c;
+}
+
+.orb-one { background: #13789a; opacity: .3; }
+.orb-two { background: #25bd78; opacity: .24; }
+
+.metrics article {
+  background: rgba(3, 14, 12, .82);
+  backdrop-filter: blur(12px);
+}
+
+.work,
+.about,
+.contact {
+  background: transparent;
+}
+
+.project-media,
+.project-card,
+.code-card {
+  background: linear-gradient(145deg, rgba(7, 24, 20, .86), rgba(4, 14, 22, .88));
+  box-shadow: 0 28px 80px rgba(0, 0, 0, .34);
+}
+
+.project-media {
+  border-color: rgba(140, 232, 202, .15);
+}
+
+.project-media img {
+  background: #050b0d;
+}
+
+.skills {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(15, 99, 71, .18), transparent 32%),
+    radial-gradient(circle at 86% 85%, rgba(15, 70, 105, .20), transparent 34%),
+    rgba(3, 12, 12, .72);
+}
+
+.skill-cloud span {
+  background: rgba(8, 27, 23, .82);
+  border-color: rgba(135, 220, 195, .14);
+}
+
+.project-card img {
+  background: #040a0c;
+}
+
+.cursor-glow {
+  background: radial-gradient(circle, rgba(80, 255, 180, .10), rgba(48, 139, 190, .05) 36%, transparent 68%);
+}
+
+/* Give the flagship FadFed artwork a little more presence. */
+.project:first-of-type .project-media {
+  box-shadow: 0 38px 110px rgba(0, 0, 0, .52), 0 0 0 1px rgba(112, 228, 193, .08);
+}
+
+.project:first-of-type .project-media img {
+  min-height: 640px;
+  object-fit: cover;
+}
+
+@media (max-width: 980px) {
+  body { background-attachment: scroll; }
+  .project:first-of-type .project-media img { min-height: 0; }
+}
+
+/* Refined experience section: darker, richer, and consistent with the green-blue theme */
+.experience {
+  color: #edf7f3;
+  background:
+    radial-gradient(circle at 90% 5%, rgba(39, 117, 157, .24), transparent 34%),
+    radial-gradient(circle at 8% 88%, rgba(21, 126, 83, .20), transparent 36%),
+    linear-gradient(145deg, rgba(5, 18, 16, .98), rgba(5, 18, 27, .96));
+  border-top: 1px solid rgba(176, 225, 210, .14);
+  border-bottom: 1px solid rgba(176, 225, 210, .14);
+  overflow: hidden;
+}
+
+.experience::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(143, 255, 192, .025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 255, 192, .025) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+}
+
+.experience .section-kicker {
+  color: #91bbae;
+}
+
+.experience-intro,
+.experience .timeline {
+  position: relative;
+  z-index: 1;
+}
+
+.experience-intro h2 {
+  color: #f6fbf9;
+  max-width: 1100px;
+  text-shadow: 0 20px 70px rgba(31, 128, 108, .15);
+}
+
+.experience .timeline {
+  border-top: 1px solid rgba(176, 225, 210, .18);
+  display: grid;
+  gap: 18px;
+}
+
+.experience .timeline-item {
+  border: 1px solid rgba(176, 225, 210, .14);
+  border-radius: 24px;
+  padding: clamp(28px, 4vw, 46px);
+  background: linear-gradient(135deg, rgba(10, 32, 28, .72), rgba(8, 22, 34, .68));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.035), 0 24px 80px rgba(0,0,0,.18);
+  backdrop-filter: blur(16px);
+  transition: transform .35s ease, border-color .35s ease, background .35s ease;
+}
+
+.experience .timeline-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(143, 255, 192, .34);
+  background: linear-gradient(135deg, rgba(12, 42, 34, .82), rgba(9, 28, 44, .80));
+}
+
+.experience .timeline-item span,
+.experience .timeline-item > div > p {
+  color: #8fb2a8;
+}
+
+.experience .timeline-item h3 {
+  color: #ffffff;
+}
+
+.experience .experience-details > p {
+  color: #c9d9d4;
+}
+
+.experience .experience-details ul {
+  color: #aabfba;
+}
+
+.experience .experience-details li::marker {
+  color: var(--lime);
+}
+
+@media (max-width: 700px) {
+  .experience .timeline {
+    gap: 14px;
+  }
+
+  .experience .timeline-item {
+    border-radius: 20px;
+    padding: 24px 20px;
+  }
+}
