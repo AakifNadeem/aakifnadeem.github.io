@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   description:
     "Senior iOS Engineer building scalable, polished mobile experiences with Swift, SwiftUI, UIKit, testing and CI/CD.",
   metadataBase: new URL("https://aakifnadeem.github.io"),
+  icons: {
+    icon: [
+      { url: "/favicon.ico?v=4", sizes: "any" },
+      { url: "/icon.png?v=4", type: "image/png" }
+    ],
+    shortcut: "/favicon.ico?v=4",
+    apple: "/apple-touch-icon.png?v=4"
+  },
   openGraph: {
     title: "Muhammad Aakif Nadeem — Senior iOS Engineer",
     description:
