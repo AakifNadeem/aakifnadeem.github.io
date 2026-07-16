@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aakifnadeem.github.io/sitemap.xml

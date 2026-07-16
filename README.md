@@ -1,17 +1,9 @@
-# Aakif Nadeem Portfolio
+# Muhammad Aakif Nadeem — Portfolio
 
-Static portfolio website for GitHub Pages.
+Animated, responsive portfolio for a Senior iOS Engineer.
 
-## Local preview
+## Publish on GitHub Pages
 
-Run a local server from this folder:
+Upload all files in this folder to the root of the `aakifnadeem.github.io` repository. In **Settings → Pages**, select **Deploy from a branch**, choose `main`, and choose `/ (root)`.
 
-```bash
-python3 -m http.server 8000
-```
-
-Then open `http://localhost:8000`.
-
-## Publish
-
-Push all files in this folder to the root of the public GitHub repository `aakifnadeem.github.io`, then enable GitHub Pages from the `main` branch and root folder.
+Live URL: https://aakifnadeem.github.io
