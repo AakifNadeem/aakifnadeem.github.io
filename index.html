@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
@@ -7,6 +7,13 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
   <meta charset="utf-8" />
+  <script>
+    (() => {
+      const saved = localStorage.getItem('portfolio-theme');
+      const theme = saved === 'light' || saved === 'dark' ? saved : 'dark';
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Muhammad Aakif Nadeem — Senior iOS Engineer building scalable, polished mobile experiences." />
   <meta name="theme-color" content="#070707" />
@@ -32,7 +39,21 @@
       <a href="#work">Work</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="header-cta magnetic" href="assets/AakifResume.pdf" target="_blank" rel="noopener">Résumé</a>
+    <div class="header-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Switch to light mode">
+        <span class="theme-toggle-track" aria-hidden="true">
+          <svg class="theme-toggle-icon theme-toggle-sun" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="3.5"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+          </svg>
+          <svg class="theme-toggle-icon theme-toggle-moon" viewBox="0 0 24 24">
+            <path d="M20 15.2A8.3 8.3 0 0 1 8.8 4a8.4 8.4 0 1 0 11.2 11.2Z"></path>
+          </svg>
+          <span class="theme-toggle-thumb"></span>
+        </span>
+      </button>
+      <a class="header-cta magnetic" href="assets/AakifResume.pdf" target="_blank" rel="noopener">Résumé</a>
+    </div>
   </header>
 
   <main id="top">
