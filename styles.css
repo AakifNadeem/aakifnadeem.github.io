@@ -735,3 +735,18 @@ html[data-theme="light"] .theme-toggle-moon {
   color: #315e52;
   opacity: .68;
 }
+
+/* Education and certifications added from the updated resume */
+.credentials{border-top:1px solid var(--line)}
+.credentials-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:5vw;margin-top:58px}
+.education-card{padding:36px;border:1px solid var(--line);border-radius:24px;background:rgba(8,20,18,.55)}
+.education-card>span,.certifications a span{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--accent)}
+.education-card h2{font:600 clamp(30px,4vw,54px)/1.08 Manrope;margin:18px 0;letter-spacing:-.045em}
+.education-card p{color:#9ca9a4;margin:0}
+.certifications{display:grid;gap:12px}
+.certifications a{display:grid;grid-template-columns:110px 1fr auto;gap:18px;align-items:center;padding:22px 24px;border:1px solid var(--line);border-radius:18px;background:rgba(8,20,18,.42);transition:.25s}
+.certifications a:hover{transform:translateY(-3px);border-color:rgba(73,220,173,.55);background:rgba(14,35,31,.7)}
+.certifications a strong{font-weight:600}.certifications a b{font-weight:400;color:var(--accent)}
+html[data-theme="light"] .education-card,html[data-theme="light"] .certifications a{background:rgba(255,255,255,.72)}
+html[data-theme="light"] .education-card p{color:#587068}
+@media(max-width:800px){.credentials-layout{grid-template-columns:1fr}.certifications a{grid-template-columns:1fr auto}.certifications a span{grid-column:1/-1}.certifications a b{grid-column:2;grid-row:2}}
